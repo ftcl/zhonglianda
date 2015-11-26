@@ -78,35 +78,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 				controller: 'PilesearchCtrl'
 			})
 
-			.state('tab.scan', {
-				url: '/scan',
+			.state('tab.business', {
+				url: '/business',
 				views: {
-					'tab-scan': {
-						templateUrl: 'templates/scan/tab-scan.html',
-						controller: 'ScanCtrl'
+					'tab-business': {
+						templateUrl: 'templates/business/tab-business.html',
+						controller: 'BusinessCtrl'
 					}
 				}
 			})
 
-			.state('tab.twinkle', {
-				url: '/twinkle',
+			.state('tab.personal', {
+				url: '/personal',
 				views: {
-					'tab-twinkle': {
-						templateUrl: 'templates/twinkle/tab-twinkle.html',
-						controller: 'TwinkleCtrl'
+					'tab-personal': {
+						templateUrl: 'templates/personal/tab-personal.html',
+						controller: 'PersonalCtrl'
 					}
 				}
 			})
-
-			.state('tab.my', {
-				url: '/my',
-				views: {
-					'tab-my': {
-						templateUrl: 'templates/my/tab-my.html',
-						controller: 'MyCtrl'
-					}
-				}
-			});
 
 			//默认路由
 			$urlRouterProvider.otherwise('tab/home');

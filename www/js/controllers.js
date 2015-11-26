@@ -1,43 +1,43 @@
 angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', 'LoaclStorageServ', '$ionicHistory',
-	function($scope, $rootScope, $timeout, $state, $stateParams, LoaclStorageServ, $ionicHistory) {
-		$scope.codeBtn = {
-			text: "获取验证码",
-			time: ""
-		};
-		$scope.login = {
-			account: "",
-			password: "",
-			register: true
-		}
-		$scope.GetCode = function() {
-			if (typeof($scope.codeBtn.time) == "string") {
-				$scope.codeBtn.text = "获取中";
-				$scope.codeBtn.time = 10;
-				calctime();
+		function($scope, $rootScope, $timeout, $state, $stateParams, LoaclStorageServ, $ionicHistory) {
+			$scope.codeBtn = {
+				text: "获取验证码",
+				time: ""
+			};
+			$scope.login = {
+				account: "",
+				password: "",
+				register: true
 			}
-		};
-		$scope.doLogin = function() {
-			$rootScope.isLogin = true;
-			LoaclStorageServ.set("isLogin", true);
-			$state.go("tab." + $stateParams.PageState);
-		};
-
-		function calctime() {
-			$timeout(function() {
-				$scope.codeBtn.time -= 1;
-				if ($scope.codeBtn.time == 0) {
-					$scope.codeBtn.text = "获取验证码";
-					$scope.codeBtn.time = "";
-				} else {
+			$scope.GetCode = function() {
+				if (typeof($scope.codeBtn.time) == "string") {
+					$scope.codeBtn.text = "获取中";
+					$scope.codeBtn.time = 10;
 					calctime();
 				}
-			}, 1000);
+			};
+			$scope.doLogin = function() {
+				$rootScope.isLogin = true;
+				LoaclStorageServ.set("isLogin", true);
+				$state.go("tab." + $stateParams.PageState);
+			};
+
+			function calctime() {
+				$timeout(function() {
+					$scope.codeBtn.time -= 1;
+					if ($scope.codeBtn.time == 0) {
+						$scope.codeBtn.text = "获取验证码";
+						$scope.codeBtn.time = "";
+					} else {
+						calctime();
+					}
+				}, 1000);
+			}
 		}
-	}
-])
-.controller('HomeCtrl', ['$scope', 'WeatherServ', '$ionicModal', 'HttpServ',
+	])
+	.controller('HomeCtrl', ['$scope', 'WeatherServ', '$ionicModal', 'HttpServ',
 		function($scope, WeatherServ, $ionicModal, HttpServ) {
 			$scope.home = {
 				city: "重庆",
@@ -69,8 +69,8 @@ angular.module('starter.controllers', [])
 			}
 		}
 	])
-	.controller('PilelistCtrl', ['$scope', '$ionicModal',
-		function($scope, $ionicModal) {
+	.controller('PilelistCtrl', ['$scope',
+		function($scope) {
 			$scope.pilelist = {
 				type: 0,
 				location: "未知"
@@ -80,8 +80,8 @@ angular.module('starter.controllers', [])
 			}
 		}
 	])
-	.controller('PilesearchCtrl', ['$scope', '$ionicHistory', '$ionicModal',
-		function($scope, $ionicHistory, $ionicModal) {
+	.controller('PilesearchCtrl', ['$scope',
+		function($scope) {
 			$scope.goBack = function() {
 				$ionicHistory.goBack();
 			}
@@ -90,83 +90,11 @@ angular.module('starter.controllers', [])
 			}
 		}
 	])
-	.controller('ScanCtrl', ['$scope', '$rootScope', '$state',
-		function($scope, $rootScope, $state) {
-			$scope.$on("$ionicView.beforeEnter", function() {
-				if (!$rootScope.isLogin) {
-					$state.go("login", {
-						PageState: "scan"
-					});
-				}
-			})
+	.controller('BusinessCtrl', ['$scope',
+		function($scope) {
 		}
 	])
-
-.controller('TwinkleCtrl', ['$scope', '$rootScope', '$state', 'PopupServ',
-	function($scope, $rootScope, $state, PopupServ) {
-		$scope.$on("$ionicView.beforeEnter", function() {
-			if (!$rootScope.isLogin) {
-				$state.go("login", {
-					PageState: "twinkle"
-				});
-			}
-		})
-		var bridge = null;
-		window.onerror = function(err) {
-			log('window.onerror: ' + err)
-		};
-
-		function connectWebViewJavascriptBridge(callback) {
-			if (window.WebViewJavascriptBridge) {
-				callback(WebViewJavascriptBridge)
-			} else {
-				document.addEventListener('WebViewJavascriptBridgeReady', function() {
-					callback(WebViewJavascriptBridge)
-				}, false)
-			}
-		};
-		connectWebViewJavascriptBridge(function(bridge) {
-			//init初始化
-			bridge.init(function(message, responseCallback) {
-				var data = {
-					'Javascript Responds': 'Wee!'
-				};
-				responseCallback(data);
-			});
-			bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
-					$scope.$apply(function() {
-						PopupServ.alert("selectImageCallback",data);
-						$scope.img = data;
-					});
-					responseData = {
-						'Javascript Says': 'Right back atcha!'
-					}
-					responseCallback(responseData)
-				});
-		})
-		$scope.selectLibrary = function() {
-			window.WebViewJavascriptBridge.callHandler('selectImageHandler', "打开相册", function(response) {
-//				PopupServ.alert("selectImageHandler",response);
-			})
-		};
-	}
-])
-
-.controller('MyCtrl', ['$scope', '$rootScope', '$state',
-	function($scope, $rootScope, $state) {
-		$scope.$on("$ionicView.beforeEnter", function() {
-			if (!$rootScope.isLogin) {
-				$state.go("login", {
-					PageState: "my"
-				});
-			}
-		})
-
-		$scope.user = {
-			head: "img/head.png",
-			level: "充电新手",
-			account: "187****7796",
-			balance: 5.00
+	.controller('PersonalCtrl', ['$scope',
+		function($scope) {
 		}
-	}
-])
+	])
