@@ -37,7 +37,6 @@ angular.module('starter.controllers', [])
 		}
 	}
 ])
-
 .controller('HomeCtrl', ['$scope', 'WeatherServ', '$ionicModal', 'HttpServ',
 		function($scope, WeatherServ, $ionicModal, HttpServ) {
 			$scope.home = {
