@@ -94,7 +94,10 @@ angular.module('starter.controllers', [])
 		function($scope) {
 		}
 	])
-	.controller('PersonalCtrl', ['$scope',
-		function($scope) {
+	.controller('PersonalCtrl', ['$scope','LoaclStorageServ',
+		function($scope,LoaclStorageServ) {
+		$scope.clearData = function(){
+			LoaclStorageServ.clear();
+		}
 		}
 	])

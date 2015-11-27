@@ -25,23 +25,16 @@
 	background: url(../img/navigation3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	text-align: center;
 }
-
-.btndiv {
-	top: 53%;
-	width: 100%;
-	position: absolute;
-	height: 55px;
-}
-
 .btnstart {
 	width: 60%;
-	height: 100%;
+	height: 55px;
 	background: #008CD7;
 	border: #FFFFFF solid 1px;
 	line-height: 55px;
 	font-size: 30px;
+	position: relative;
+	top: 60%;
 }
 
 .btnstart:link,.btnstart:visited,.btnstart:hover,.btnstart:active {
