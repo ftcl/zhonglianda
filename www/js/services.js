@@ -49,8 +49,8 @@ angular.module('starter.services', [])
 			}
 		}
 	])
-	.factory('LoaclStorageServ', ['$window','PopupServ',
-		function($window,PopupServ) {
+	.factory('LoaclStorageServ', ['$window', 'PopupServ',
+		function($window, PopupServ) {
 			return {
 				set: function(key, value) {
 					$window.localStorage[key] = value;
@@ -155,9 +155,11 @@ angular.module('starter.services', [])
 						'Content-Type': 'application/x-www-form-urlencoded'
 					}
 				}).success(function(response) {
-					
+
 					PopupServ.alert("成功", response);
 					q.resolve(response);
+				}).error(function(data, header, config, status) {
+					//处理响应失败
 				});
 				return q.promise;
 			}
