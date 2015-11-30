@@ -11,7 +11,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 			}
 			$rootScope.isNavigation = LoaclStorageServ.getBoolean("isNavigation", true); //获取localstroage判断是否为第一次登录，true启动导航页
 			$rootScope.isLogin = LoaclStorageServ.getBoolean("isLogin", false); //获取localstroage判断是否登录
-			if (true) {
+			if ($rootScope.isNavigation) {
 				LoaclStorageServ.set("isNavigation", false); //setlocalstroage判断是否启动导航页
 				$state.go('navigation'); //根据路由配置跳转至导航页
 			} else {

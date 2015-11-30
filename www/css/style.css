@@ -1,3 +1,6 @@
+*{
+	font-family: "微软雅黑";
+}
 /*ion-slide-box */
 
 .slider {
@@ -99,5 +102,60 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 }
 .contentE1{
 	background-color:#E1E1E1 ;
+}
+.color9a{
+	color:#9a9a9a;
+}
+.home-address{
+	font-size: 8px;
+}
+.home-type{
+	background-color:#ff9a42;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	padding: 14px;
+    display: block;
+    font-size: 33px;
+    position: relative;
+	top:8px
+}
+.colorNum{
+	color:#ff9f02
+}
+.colorC0{
+	color:#c0c0c0;
+	font-size: 12px;
+}
+.fontNum{
+	font-size: 33px;
+}
+.col div:first-child{
+	height: 65px;
+}
+.col div:last-child{
+	height: 8px;
+}
+.home-btn,.home-btn:hover,.home-btn:active,.home-btn:link,.home-btn:visited{
+	background: #0191da;
+	color: #FFFFFF;
+	border: #0191da solid 1px;
+	min-height:20px;
+	border-radius:5px ;
+	line-height: 32px;
+	top:20px
+}
+.home-btn.activated{
+	background: #079EEA;
+}
+.col-15{
+	max-width: 15%;
+}
+.col-35{
+	max-width: 35%;
+}
+.col-30{
+	max-width: 30%;
 }
 /*home*/
