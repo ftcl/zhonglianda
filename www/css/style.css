@@ -287,12 +287,9 @@ ion-tabs.tabs-color-active-positive .tab-item.activated {
 }
 .applydiv{
 	width: 100%;
-	height: 100px;
+	height: 75px;
 }
-.applydiv span{
-	
-}
-.applydiv input{
+.applydiv input,.applydiv select{
 	width:100%;
 	height: 30px;
 	line-height: 30px;
