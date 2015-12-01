@@ -159,8 +159,9 @@ angular.module('starter.controllers', [])
 	.controller('BusinessCtrl', ['$scope',
 		function($scope) {}
 	])
-	.controller('PersonalCtrl', ['$scope', 'LoaclStorageServ',
-		function($scope, LoaclStorageServ) {
+	.controller('PersonalCtrl', ['$scope', 'LoaclStorageServ','$state',
+		function($scope, LoaclStorageServ,$state) {
+			$state.go("login");
 			$scope.clearData = function() {
 				LoaclStorageServ.clear();
 			}

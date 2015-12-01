@@ -42,10 +42,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 				})
 
 			.state('login', { //路由名
-				url: '/login/:PageState',//地址
+				url: '/login',//地址
 				cache: true,//是否缓存页面
 				templateUrl: 'templates/login/login.html',//模板页页面
-				controller: 'LoginCtrl' //
+				controller: 'LoginCtrl' 
 			})
 
 			.state('tab', {
