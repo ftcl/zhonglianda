@@ -297,4 +297,37 @@ ion-tabs.tabs-color-active-positive .tab-item.activated {
 	padding: 0 5px;
 	border-radius: 1px;
 }
+.applydiv textarea{
+	width: 100%;
+	padding: 0 5px;
+	border: #c0c0c0 solid 1px;
+	border-radius: 1px;
+}
+.input-label-rigth{
+	position: absolute;
+	right: 16px;
+	margin-top: 10px;
+}
+.applySubBtn,
+.applySubBtn:hover,
+.applySubBtn:active,
+.applySubBtn:link,
+.applySubBtn:visited{
+	width: 80%;
+	height: 30px;
+	background: #259cde;
+	border-radius: 7px;
+	color: #FFFFFF;
+	font-size: 22px;
+}
+.applySubBtn.activated {
+	background: #079EEA;
+}
+.applydiv-textarea{
+	height: 150px;
+}
+.applydiv-sub{
+	width: 100%;
+	text-align: center;
+}
 /**/
