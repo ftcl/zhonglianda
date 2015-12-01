@@ -51,7 +51,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 			.state('tab', {
 				url: '/tab',
 				abstract: true,
-				templateUrl: 'templates/tabs.html'
+				templateUrl: 'templates/tabs.html',
+				controller: 'TabsCtrl'
 			})
 
 			.state('tab.home', {
@@ -60,6 +61,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 					'tab-home': {//view名
 						templateUrl: 'templates/home/tab-home.html',
 						controller: 'HomeCtrl'
+					}
+				}
+			})
+			.state('tab.invest', {
+				url: '/invest',
+				views: {	//tabs中加载页面到指定view
+					'tab-home': {//view名
+						templateUrl: 'templates/home/invest.html',
+						controller: 'InvestCtrl'
+					}
+				}
+			})
+			.state('tab.loan', {
+				url: '/loan',
+				views: {	//tabs中加载页面到指定view
+					'tab-home': {//view名
+						templateUrl: 'templates/home/loan.html',
+						controller: 'LoanCtrl'
+					}
+				}
+			})
+			.state('tab.apply', {
+				url: '/apply',
+				views: {	//tabs中加载页面到指定view
+					'tab-home': {//view名
+						templateUrl: 'templates/home/apply.html',
+						controller: 'ApplyCtrl'
 					}
 				}
 			})

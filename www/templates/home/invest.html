@@ -1,32 +1,24 @@
-<ion-view hide-nav-bar='true'>
-	<ion-content id="tab_home" class="contentE1">
-		<ion-slide-box on-slide-changed="slideHasChanged($index)">
-			<ion-slide>
-				<div class="home_box home_nav1"></div>
-			</ion-slide>
-			<ion-slide>
-				<div class="home_box home_nav2"></div>
-			</ion-slide>
-			<ion-slide>
-				<div class="home_box home_nav3"></div>
-			</ion-slide>
-			<ion-slide>
-				<div class="home_box home_nav4"></div>
-			</ion-slide>
-			<ion-slide>
-				<div class="home_box home_nav5"></div>
-			</ion-slide>
-		</ion-slide-box>
+<ion-view >
+	<ion-header-bar align-title="center" class="bar-invest">
+		<div class="buttons">
+			<a class="button button-icon ion-ios-arrow-back" nav-transition="none" href="#/tab/home"></a>
+		</div>
+		<h1 class="title" ng-click="openPopover($event)">我要投资<i class="icon ion-arrow-down-b"></i>
+		</h1>
+		<div class="buttons">
+			<a class="button button-icon ion-ios-information-outline"></a>
+		</div>
+	</ion-header-bar>
+	<ion-content id="tab_vest" class="contentE1">
 		<div class="row">
 			<div class="col">
-				<a href="#/tab/invest" nav-transition="none">
-				<img src="img/home1.png" class="homeimg" href="" />
-				</a>
+				<img src="img/invest1.jpg" class="homeimg" />
 			</div>
 			<div class="col">
-				<a href="#/tab/loan" nav-transition="none">
-				<img src="img/home2.png" class="homeimg" />
-				</a>
+				<img src="img/invest2.jpg" class="homeimg" />
+			</div>
+			<div class="col">
+				<img src="img/invest3.jpg" class="homeimg" />
 			</div>
 		</div>
 		<div class="list">
@@ -57,7 +49,7 @@
 								<span class="fontNum" ng-bind="data.time"></span><span>个月</span>
 							</div>
 						</div>
-						<div class="col col-20">
+						<div class="col col-25">
 							<div class="">
 								<span class="fontNum colorNum" ng-bind="data.rate"></span><span>%</span>
 								<br />
@@ -67,7 +59,7 @@
 								<span>分期付款</span>
 							</div>
 						</div>
-						<div class="col col-25">
+						<div class="col col-20">
 							<button class="button home-btn">
 								立即抢标
 							</button>

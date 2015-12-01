@@ -37,37 +37,103 @@ angular.module('starter.controllers', [])
 			}
 		}
 	])
-	.controller('HomeCtrl', ['$scope', 'WeatherServ', '$ionicModal', 'HttpServ',
-		function($scope, WeatherServ, $ionicModal, HttpServ) {
-			$scope.home = {
-				city: "重庆",
-				day: WeatherServ.day(),
-				week: WeatherServ.week(),
-				weather: WeatherServ.weather("重庆")
-			};
-			$scope.selectCity = function() {
-				if (!$scope.modal) {
-					$ionicModal.fromTemplateUrl('templates/home/selectcity.html', {
-						scope: $scope,
-						animation: 'slide-in-up'
-					}).then(function(modal) {
-						$scope.modal = modal;
-						$scope.modal.show();
+	.controller('TabsCtrl', ['$scope', '$ionicPopover', '$state',
+		function($scope, $ionicPopover, $state) {
+			$scope.openPopover = openPopover;
+
+			function openPopover($event) {
+				if (!$scope.popover) {
+					$ionicPopover.fromTemplateUrl('templates/home/selectPopover.html', {
+						scope: $scope
+					}).then(function(popover) {
+						$scope.popover = popover;
+						$scope.popover.show($event);
 					});
 				} else {
-					$scope.modal.show();
+					$scope.popover.show($event);
 				}
-			};
-
-			$scope.httpPost = function() {
-				var data = {
-					data: "test data"
-				}
-				HttpServ.post(data).then(function(data) {
-					$scope.httpback = data;
-				})
 			}
 		}
+	])
+	.controller('HomeCtrl', ['$scope',
+		function($scope) {
+			$scope.homeMessage = [{
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "A",
+				money: 500000,
+				time: 2,
+				rate: 18,
+			}, {
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "B",
+				money: 10000,
+				time: 2,
+				rate: 20,
+			}, {
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "C",
+				money: 6000,
+				time: 4,
+				rate: 18,
+			}, {
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "A",
+				money: 500000,
+				time: 2,
+				rate: 1,
+			}]
+		}
+	])
+	.controller('InvestCtrl', ['$scope',
+		function($scope) {
+			$scope.homeMessage = [{
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "A",
+				money: 500000,
+				time: 2,
+				rate: 18,
+			}, {
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "B",
+				money: 10000,
+				time: 2,
+				rate: 20,
+			}, {
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "C",
+				money: 6000,
+				time: 4,
+				rate: 18,
+			}, {
+				name: "戴添岳",
+				reason: "生意上需要资金",
+				address: "广州市天河区",
+				type: "A",
+				money: 500000,
+				time: 2,
+				rate: 1,
+			}]
+		}
+	])
+	.controller('LoanCtrl', ['$scope',
+		function($scope) {}
+	])
+	.controller('ApplyCtrl', ['$scope',
+		function($scope) {}
 	])
 	.controller('PilelistCtrl', ['$scope',
 		function($scope) {
@@ -91,13 +157,12 @@ angular.module('starter.controllers', [])
 		}
 	])
 	.controller('BusinessCtrl', ['$scope',
-		function($scope) {
-		}
+		function($scope) {}
 	])
-	.controller('PersonalCtrl', ['$scope','LoaclStorageServ',
-		function($scope,LoaclStorageServ) {
-		$scope.clearData = function(){
-			LoaclStorageServ.clear();
-		}
+	.controller('PersonalCtrl', ['$scope', 'LoaclStorageServ',
+		function($scope, LoaclStorageServ) {
+			$scope.clearData = function() {
+				LoaclStorageServ.clear();
+			}
 		}
 	])

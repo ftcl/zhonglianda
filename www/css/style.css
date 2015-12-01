@@ -1,6 +1,8 @@
-*{
+* {
 	font-family: "微软雅黑";
 }
+
+
 /*ion-slide-box */
 
 .slider {
@@ -29,6 +31,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .btnstart {
 	width: 60%;
 	height: 55px;
@@ -40,7 +43,10 @@
 	top: 60%;
 }
 
-.btnstart:link,.btnstart:visited,.btnstart:hover,.btnstart:active {
+.btnstart:link,
+.btnstart:visited,
+.btnstart:hover,
+.btnstart:active {
 	color: #FFFFFF;
 	background: #008CD7;
 	border: #FFFFFF solid 1px;
@@ -48,15 +54,20 @@
 
 
 /*ion-slide-box */
+
+
 /*home*/
+
 .home_box {
 	height: 300px;
 	text-align: center;
 }
-#tab_home .slider-pager{
-	text-align:right ;
+
+#tab_home .slider-pager {
+	text-align: right;
 	right: 30px;
 }
+
 .home_nav1 {
 	background: url(../img/navigation1.jpg);
 	background-size: cover;
@@ -74,6 +85,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
 .home_nav4 {
 	background: url(../img/navigation1.jpg);
 	background-size: cover;
@@ -85,77 +97,207 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.tabs{
+
+.tabs {
 	background-color: #6D6A71;
 }
-.tab-item{
-	background:-webkit-gradient(linear, 0 0,100% 0 ,  color-stop(0,rgb(150, 147, 153)),color-stop(0.5,rgb(130, 125, 132)),color-stop(1,rgb(150, 147, 153)));
+
+.tab-item {
+	background: -webkit-gradient(linear, 0 0, 100% 0, color-stop(0, rgb(150, 147, 153)), color-stop(0.5, rgb(130, 125, 132)), color-stop(1, rgb(150, 147, 153)));
 }
-ion-tabs.tabs-color-active-positive .tab-item{
+
+ion-tabs.tabs-color-active-positive .tab-item {
 	color: #97989C;
 }
-ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated{
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active,
+ion-tabs.tabs-color-active-positive .tab-item.active,
+ion-tabs.tabs-color-active-positive .tab-item.activated {
 	color: #E9EAEC;
 }
-.homeimg{
+
+.homeimg {
 	width: 100%;
 }
-.contentE1{
-	background-color:#E1E1E1 ;
+
+.contentE1 {
+	background-color: #E1E1E1;
 }
-.color9a{
-	color:#9a9a9a;
+
+.color9a {
+	color: #9a9a9a;
 }
-.home-address{
+
+.home-address {
 	font-size: 8px;
 }
-.home-type{
-	background-color:#ff9a42;
+
+.home-type {
+	background-color: #ff9a42;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
 	text-align: center;
 	padding: 14px;
-    display: block;
-    font-size: 33px;
-    position: relative;
-	top:8px
+	display: block;
+	font-size: 33px;
+	position: relative;
+	top: 8px
 }
-.colorNum{
-	color:#ff9f02
+
+.colorNum {
+	color: #ff9f02
 }
-.colorC0{
-	color:#c0c0c0;
+
+.colorC0 {
+	color: #c0c0c0;
 	font-size: 12px;
 }
-.fontNum{
+
+.fontNum {
 	font-size: 33px;
 }
-.col div:first-child{
+
+.col div:first-child {
 	height: 65px;
 }
-.col div:last-child{
+
+.col div:last-child {
 	height: 8px;
 }
-.home-btn,.home-btn:hover,.home-btn:active,.home-btn:link,.home-btn:visited{
+
+.home-btn,
+.home-btn:hover,
+.home-btn:active,
+.home-btn:link,
+.home-btn:visited {
 	background: #0191da;
 	color: #FFFFFF;
 	border: #0191da solid 1px;
-	min-height:20px;
-	border-radius:5px ;
+	min-height: 20px;
+	border-radius: 5px;
 	line-height: 32px;
-	top:20px
+	top: 20px
 }
-.home-btn.activated{
+
+.home-btn.activated {
 	background: #079EEA;
 }
-.col-15{
+
+.col-15 {
 	max-width: 15%;
 }
-.col-35{
-	max-width: 35%;
+
+.col-40 {
+	max-width: 40%;
 }
-.col-30{
+
+.col-30 {
 	max-width: 30%;
 }
+
+
 /*home*/
+
+
+/*invest*/
+
+.bar-invest {
+	background: #0191da
+}
+
+
+/*invest*/
+
+.bar-invest .button,
+.bar-invest .button:hover,
+.bar-invest .button:active,
+.bar-invest .button:link,
+.bar-invest .button:visited {
+	color: #FFFFFF;
+}
+
+.bar-invest .button.activated {
+	color: #FFFFFF;
+}
+
+.title {
+	color: #FFFFFF;
+}
+
+.popover-header {
+	height: 30px;
+	line-height: 0;
+	text-align: center;
+}
+
+.popover-header a {
+	padding: 16px;
+}
+
+
+/*invest*/
+
+
+/*loan*/
+
+.loanbox {
+	width: 100%;
+	margin: 16px 0;
+	position: relative;
+}
+.loanbox div{
+	width: 100%;
+	height: 100px;
+	background: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+.loanbox span {
+	width: 100%;
+	display: block;
+	font-size: 12px;
+	color: #666666;
+}
+.loanbtn,
+.loanbtn:hover,
+.loanbtn:active,
+.loanbtn:link,
+.loanbtn:visited {
+	background: #0191da;
+	color: #FFFFFF;
+	border: #0191da solid 1px;
+	min-height: 30px;
+	border-radius: 5px;
+	line-height: 32px;
+	top: 10px;
+	width: 80%;
+	font-size: 22px;
+	padding: 4px 0;
+}
+
+.loanbtn.activated {
+	background: #079EEA;
+}
+/*loan*/
+/**/
+.applyimg{
+	width: 100%;
+}
+.applydiv{
+	width: 100%;
+	height: 100px;
+}
+.applydiv span{
+	
+}
+.applydiv input{
+	width:100%;
+	height: 30px;
+	line-height: 30px;
+	border: #c0c0c0 solid 1px;
+	padding: 0 5px;
+	border-radius: 1px;
+}
+/**/
