@@ -1,4 +1,18 @@
 angular.module('starter.services', [])
+.directive('ngInput', [
+		function($rootScope,$PhotoSwipe) {
+			return {
+				restrict: 'E',
+				replace: true,
+				link: function(scope, element, attr) {
+				},
+				scope:{
+					inputType:"=currenttype"
+				},
+				template: '<input type="{{inputType}}" placeholder="请设置登录密码"/>'
+			}
+		}
+	])
 	.factory('PopupServ', ['$ionicPopup',
 		function($ionicPopup) {
 			var service = {

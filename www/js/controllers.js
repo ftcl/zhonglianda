@@ -1,39 +1,29 @@
 angular.module('starter.controllers', [])
 
-.controller('LoginCtrl', ['$scope', '$rootScope', '$timeout', '$state', '$stateParams', 'LoaclStorageServ', '$ionicHistory',
-		function($scope, $rootScope, $timeout, $state, $stateParams, LoaclStorageServ, $ionicHistory) {
-			$scope.codeBtn = {
-				text: "获取验证码",
-				time: ""
-			};
-			$scope.login = {
-				account: "",
-				password: "",
-				register: true
-			}
-			$scope.GetCode = function() {
-				if (typeof($scope.codeBtn.time) == "string") {
-					$scope.codeBtn.text = "获取中";
-					$scope.codeBtn.time = 10;
-					calctime();
-				}
-			};
-			$scope.doLogin = function() {
-				$rootScope.isLogin = true;
-				LoaclStorageServ.set("isLogin", true);
-				$state.go("tab." + $stateParams.PageState);
-			};
+.controller('LoginCtrl', ['$scope',
+		function($scope) {}
+	])
+	.controller('RegisterCtrl', ['$scope',
+		function($scope) {
+			$scope.switchType = switchType;
+			$scope.controlOb = {
+				type:"password"}
 
-			function calctime() {
-				$timeout(function() {
-					$scope.codeBtn.time -= 1;
-					if ($scope.codeBtn.time == 0) {
-						$scope.codeBtn.text = "获取验证码";
-						$scope.codeBtn.time = "";
-					} else {
-						calctime();
-					}
-				}, 1000);
+			function switchType() {
+				if ($scope.controlOb.type == "text") {
+					$scope.controlOb.type = "password";
+				} else {
+					$scope.controlOb.type = "text";
+				}
+			}
+		}
+	])
+	.controller('AppCtrl', ['$scope', '$ionicHistory',
+		function($scope, $ionicHistory) {
+			$scope.goBack = goBack;
+
+			function goBack() {
+				$ionicHistory.goBack();
 			}
 		}
 	])
@@ -52,7 +42,7 @@ angular.module('starter.controllers', [])
 				} else {
 					$scope.popover.show($event);
 				}
-			}
+			};
 		}
 	])
 	.controller('HomeCtrl', ['$scope',
@@ -159,10 +149,17 @@ angular.module('starter.controllers', [])
 	.controller('BusinessCtrl', ['$scope',
 		function($scope) {}
 	])
-	.controller('PersonalCtrl', ['$scope', 'LoaclStorageServ','$state',
-		function($scope, LoaclStorageServ,$state) {
-			$state.go("login");
+	.controller('PersonalCtrl', ['$scope', 'LoaclStorageServ', '$state',
+		function($scope, LoaclStorageServ, $state) {
+			$scope.isLogin = false;
+			$scope.$on('$ionicView.beforeEnter', function() {
+				if (!$scope.isLogin) {
+					$scope.isLogin = true;
+					$state.go("login");
+				}
+			})
 			$scope.clearData = function() {
+				$scope.isLogin = false;
 				LoaclStorageServ.clear();
 			}
 		}

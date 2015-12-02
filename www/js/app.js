@@ -47,6 +47,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 				templateUrl: 'templates/login/login.html',//模板页页面
 				controller: 'LoginCtrl' 
 			})
+			.state('register', { //路由名
+				url: '/register',//地址
+				cache: true,//是否缓存页面
+				templateUrl: 'templates/login/register.html',//模板页页面
+				controller: 'RegisterCtrl' 
+			})
 
 			.state('tab', {
 				url: '/tab',
@@ -118,6 +124,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
 			.state('tab.personal', {
 				url: '/personal',
+				cache: true,
 				views: {
 					'tab-personal': {
 						templateUrl: 'templates/personal/tab-personal.html',

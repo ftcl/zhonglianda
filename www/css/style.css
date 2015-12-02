@@ -246,7 +246,8 @@ ion-tabs.tabs-color-active-positive .tab-item.activated {
 	margin: 16px 0;
 	position: relative;
 }
-.loanbox div{
+
+.loanbox div {
 	width: 100%;
 	height: 100px;
 	background: #FFFFFF;
@@ -254,12 +255,14 @@ ion-tabs.tabs-color-active-positive .tab-item.activated {
 	bottom: 0;
 	text-align: center;
 }
+
 .loanbox span {
 	width: 100%;
 	display: block;
 	font-size: 12px;
 	color: #666666;
 }
+
 .loanbtn,
 .loanbtn:hover,
 .loanbtn:active,
@@ -280,39 +283,50 @@ ion-tabs.tabs-color-active-positive .tab-item.activated {
 .loanbtn.activated {
 	background: #079EEA;
 }
+
+
 /*loan*/
-/**/
-.applyimg{
+
+
+/*apply*/
+
+.applyimg {
 	width: 100%;
 }
-.applydiv{
+
+.applydiv {
 	width: 100%;
 	height: 75px;
 }
-.applydiv input,.applydiv select{
-	width:100%;
+
+.applydiv input,
+.applydiv select {
+	width: 100%;
 	height: 30px;
 	line-height: 30px;
 	border: #c0c0c0 solid 1px;
 	padding: 0 5px;
 	border-radius: 1px;
 }
-.applydiv textarea{
+
+.applydiv textarea {
 	width: 100%;
 	padding: 0 5px;
 	border: #c0c0c0 solid 1px;
 	border-radius: 1px;
 }
-.input-label-rigth{
+
+.input-label-rigth {
 	position: absolute;
 	right: 16px;
 	margin-top: 10px;
 }
+
 .applySubBtn,
 .applySubBtn:hover,
 .applySubBtn:active,
 .applySubBtn:link,
-.applySubBtn:visited{
+.applySubBtn:visited {
 	width: 80%;
 	height: 30px;
 	background: #259cde;
@@ -320,14 +334,191 @@ ion-tabs.tabs-color-active-positive .tab-item.activated {
 	color: #FFFFFF;
 	font-size: 22px;
 }
+
 .applySubBtn.activated {
 	background: #079EEA;
 }
-.applydiv-textarea{
+
+.applydiv-textarea {
 	height: 150px;
 }
-.applydiv-sub{
+
+.applydiv-sub {
 	width: 100%;
 	text-align: center;
 }
-/**/
+
+
+/*apply*/
+
+
+/*login*/
+
+.login-top {
+	width: 100%;
+	background: #008cd7;
+	text-align: center;
+}
+
+.login-bottom {
+	width: 100%;
+	height: 125px;
+	background: #0070aa;
+}
+
+.logo-div {
+	width: 100%;
+	padding-bottom: 20px;
+	padding: 30px 0 20px 0;
+	text-align: center;
+}
+
+.logo-div img {}
+
+.list-from {
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.list-from .item {
+	background: transparent;
+	border: none;
+	border-bottom: solid 1px #f8fcff;
+	padding-left: 0;
+}
+
+.list-from input {
+	color: #66b6e7;
+}
+
+.input-img {
+	margin-right: 10px;
+}
+
+.logo-sub {
+	padding-bottom: 100px;
+}
+
+.logo-btn {
+	margin-top: 50px;
+	width: 50%;
+	background: #715d76;
+	color: #fdfeff;
+	box-shadow: 0 4px 2px #5c4d60;
+	border: none;
+	font-size: 22px;
+}
+
+.logo-btn:hover,
+.logo-btn:active,
+.logo-btn:link,
+.logo-btn:visited {
+	background: #715d76;
+	color: #fdfeff;
+	box-shadow: 0 2px 2px #5c4d60;
+}
+
+.logo-btn.activated {
+	color: #fdfeff;
+	background: #715d76;
+	box-shadow: 0 2px 2px #5c4d60;
+}
+
+.logo-a {
+	display: block;
+	margin-top: 10px;
+	color: #d1e3d7;
+	text-decoration: none;
+}
+
+.logo-register {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.logo-reg-btn,
+.logo-reg-btn:hover,
+.logo-reg-btn:active,
+.logo-reg-btn:link,
+.logo-reg-btn:visited {
+	width: 70%;
+	border: #ffffff solid 1px;
+	border-radius: 3px;
+	background: #1a7db4;
+	font-size: 16px;
+	color: #FFFFFF;
+	padding: 0 8px;
+}
+
+.logo-reg-a {
+	display: block;
+	margin-top: 10px;
+	color: #FFFFFF;
+}
+
+
+/*login*/
+
+
+/*register*/
+
+.list-register {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.list-register .item {
+	border: none;
+	border-bottom: #e5e5e5 solid 1px;
+	height: 55px;
+	margin-top: 2px;
+}
+.reg-btn-send,.reg-btn-send.activated{
+	border: none;
+	background: transparent;
+	color: #ec7a34;
+	line-height: 50px;
+	box-shadow: none;
+}
+.reg-div{
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.reg-btn-sub,
+.reg-btn-sub:hover,
+.reg-btn-sub:active,
+.reg-btn-sub:link,
+.reg-btn-sub:visited{
+	width: 80%;
+	background: #357dc9;
+	border-radius: 4px;
+	font-size: 22px;
+	color: #FFFFFF;
+}
+.reg-btn-sub.activated{
+	background: #4590DE;
+}
+.list-check{
+	width: 80%;
+	margin: 0 auto;
+	margin-top:10px;
+	text-align: left;
+}
+.read-span{
+	color: #b9b9b9;
+}
+.read-a{
+	color: #274d7a;
+	text-decoration: none;
+}
+.list-check .item-checkbox .checkbox{
+	width: 150px;
+}
+.eye-btn{
+	color: #0e3c6e;
+}
+/*register*/
