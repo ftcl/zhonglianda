@@ -1,5 +1,5 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.city'])
-	//run 限于页面执行
+	//run最新执行
 	.run(function($ionicPlatform, $state, $rootScope, LoaclStorageServ) {
 		$ionicPlatform.ready(function() {
 			if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
